@@ -1,0 +1,23 @@
+
+ ---- laravel auth ----
+
+composer require laravel/ui --dev  --integrate auth 
+php artisan
+php artisan help ui
+php artisan ui vue --auth
+php artisan route:list
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
