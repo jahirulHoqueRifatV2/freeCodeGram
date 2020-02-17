@@ -8,6 +8,10 @@ php artisan ui vue --auth
 php artisan route:list
 
 
+loremLaboris consequat incididunt ipsum nostrud ex deserunt.
+Aute sit ut eiusmod minim excepteur. Duis mollit sunt incididunt velit ea magna dolor irure ut laborum eu enim amet dolor. Voluptate et deserunt veniam fugiat incididunt aliquip aliquip sint minim duis sint pariatur ipsum. Duis est et cillum dolore deserunt magna ea in.
+
+
 
 
 
