@@ -46,28 +46,30 @@ class PostController extends Controller
     {
         $validateData = request()->validate([
             'caption'=>'required ',
-            'image' =>[ 'required' , 'image ']
+            'image' =>[ 'required' , 'image']
 
 
         ]);
+        $imagePath = request('image')->store('uploads', 'public');
 
-        dd(request('image')->store('uploads','public'));
+        Auth::user()->post->create([
+            'caption' => $validateData['caption'],
+            'image' => $imagePath,
 
-        Auth::user()->post()->create($validateData);
+        ]);  
+
+        //return redirect('/profile/' . auth()->user()->id);
+
         dd($validateData);
 
         //$user->orders()->associate($order);
 
         //Post::create($validateData);
-
-
-    }
-
-
-    /**
+        
+    }    /**
      * Display the specified resource.
      *
-     * @param  \App\Post  $post
+     * @param  \App\Post  $posts
      * @return \Illuminate\Http\Response
      */
     public function show(Post $post)

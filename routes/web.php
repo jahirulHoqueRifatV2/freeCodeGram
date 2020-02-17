@@ -21,3 +21,5 @@ Route::post('/post', 'PostController@store');
 Route::get('/post/create','PostController@create')->name('post.create');
 
 Route::get('/profile/{id}', 'ProfileController@index')->name('profile.index');
+
+

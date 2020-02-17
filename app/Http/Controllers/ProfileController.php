@@ -15,7 +15,7 @@ class ProfileController extends Controller
      */
     public function index($id)
     {
-        $user = User::where('id', $id)->first();
+        $user = User::where('id', $id)->firstorFail();
 
         return view('profile.index', compact('user'));
     }
