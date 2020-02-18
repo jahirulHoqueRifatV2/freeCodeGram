@@ -48,19 +48,21 @@ class PostController extends Controller
             'caption'=>'required ',
             'image' =>[ 'required' , 'image']
 
-
         ]);
         $imagePath = request('image')->store('uploads', 'public');
+        
+        
 
-        Auth::user()->post->create([
-            'caption' => $validateData['caption'],
-            'image' => $imagePath,
+        Auth::user()->post()->create([
+            'caption' => $validateData['caption'] ,
+            'image' => $imagePath 
 
         ]);  
 
-        //return redirect('/profile/' . auth()->user()->id);
 
-        dd($validateData);
+        return redirect('/profile/' . auth()->user()->id); 
+
+        //dd($validateData);
 
         //$user->orders()->associate($order);
 
@@ -99,7 +101,6 @@ class PostController extends Controller
     {
         //
     }
-
     /**
      * Remove the specified resource from storage.
      *
