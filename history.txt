@@ -1,0 +1,78 @@
+   
+  500  git init
+  501  git a .
+  502  git add .
+  503  git status
+  504  git commit -m "half-path 2.10.21"
+  505  sudo git commit -m "half-path 2.10.21"
+  506  git push -u origin master
+  507  php artisan
+  508  cd Desktop/freeCodeGram/
+  509  php artisan
+  510  php artisan route:list
+  511  git add .
+  512  sudo git commit "vul ase"
+  513  sudo git commit -m "vul ase"
+  514  git push -u origin master
+  515  php artisan config:cache
+  516  php artisan serve
+  517  php artisan config:cache
+  518  php artisan serve
+  519  php artisan tinker
+  520  php artisan
+  521  php artisan storage:link
+  522  atom .
+  523  cd ../../hrms/
+  524  ls
+  525  git clone https://jahirulhoquerifat@bitbucket.org/ibrahimkhalil_v2/payroll-backend.git
+  526  cd payroll-backend/
+  527  cat .env
+  528  ls
+  529  ls -l
+  530  composer install
+  531  cd ..
+  532  ls
+  533  rm -rf payroll-backend/
+  534  ls
+  535  git clone https://jahirulhoquerifat@bitbucket.org/ibrahimkhalil_v2/payroll-backend.git
+  536  cat .env
+  537  cat .env.
+  538  ls -l
+  539  cd payroll-backend/
+  540  cat .env
+  541  cat .env.example 
+  542  cp .env.example .env
+  543  nano .env
+  544  php artisan key:generate
+  545  composer install
+  546  php artisan key:generate
+  547  php artisan passport:install
+  548  php artisan migrate
+  549  git branch 
+  550  git branch -a
+  551  nano rifat.txt
+  552  git add rifat.txt 
+  553  git log 
+  554  git commit -m "test from rifat"
+  555  git push origin master 
+  556  git log
+  557  git pull
+  558  git branch 
+  559  git branch -a
+  560  git checkout dev
+  561  cd ../../../Documents/
+  562  ls
+  563  mkdir debs
+  564  cd debs/
+  565  wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
+  566  sudo dpkg -i gitkraken-amd64.deb 
+  567  sudo apt install -f
+  568  exit
+  569  cd Desktop/
+  570  ls
+  571  cd hrms/
+  572  cd payroll-backend/
+  573  git branch 
+  574  git pull
+  575  git status 
+  576  

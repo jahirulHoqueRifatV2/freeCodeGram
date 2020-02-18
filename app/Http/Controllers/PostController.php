@@ -6,12 +6,14 @@ use App\Post;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Intervention\Image\Facades\Image;
+
 
 class PostController extends Controller
 {
 
     public function __construct(){
-       
+
         $this->middleware('auth');
     }
 
@@ -50,24 +52,24 @@ class PostController extends Controller
 
         ]);
         $imagePath = request('image')->store('uploads', 'public');
-        
-        
+
+        $image  = Image::make(public_path("storage/{$imagePath}"))->fit(1200,1200);
 
         Auth::user()->post()->create([
             'caption' => $validateData['caption'] ,
-            'image' => $imagePath 
+            'image' => $imagePath
 
-        ]);  
+        ]);
 
 
-        return redirect('/profile/' . auth()->user()->id); 
+        return redirect('/profile/' . auth()->user()->id);
 
         //dd($validateData);
 
         //$user->orders()->associate($order);
 
         //Post::create($validateData);
-        
+
     }    /**
      * Display the specified resource.
      *
