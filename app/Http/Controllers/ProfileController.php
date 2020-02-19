@@ -83,6 +83,15 @@ class ProfileController extends Controller
         ]);
 
 
+        $profile = user()->profile()->id(); 
+
+        $profile->title = request('title');
+        $profile->description = request('description');
+        $profile->url = request('url');
+
+        $profile->save();
+
+
 
         return redirect('/profile/' . auth()->user()->id);
     }

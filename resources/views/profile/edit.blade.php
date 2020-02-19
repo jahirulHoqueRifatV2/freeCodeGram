@@ -4,8 +4,9 @@
 
     <div class="container">
 
-        <form action="/post" method="POST" enctype="multipart/form-data">
+        <form action="/profile" method="POST" enctype="multipart/form-data">
             @csrf
+            @method('PATCH')
 
             <div class="row">
                 <div class="col-8 offset-2">
@@ -58,7 +59,7 @@
                             {{-- </div> --}}
                     </div>
 
-                    <div class="row">
+                    {{-- <div class="row">
 
 
                         <label for="image" class="col-md-4 col-form-label">Image</label>
@@ -71,7 +72,7 @@
 
                         @enderror
 
-                    </div>
+                    </div> --}}
 
                     <div class="row pt-4">
                         <button class="btn btn-primary">Update</button>
