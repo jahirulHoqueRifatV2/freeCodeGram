@@ -14,10 +14,10 @@
                         <h1>Add New Post</h1>
                     </div>
                     <div class="form-group row">
-                            <label for=caption class="col-md-4 col-form-label ">Post Caption</label>
+                            <label for= 'caption' class="col-md-4 col-form-label ">Post Caption</label>
 
                             {{-- <div class="col-md-6"> --}}
-                                <input id=caption type="text" class="form-control @error('caption') is-invalid @enderror" name=caption value="{{ old('caption') }}" required autocomplete=caption autofocus>
+                                <input id='caption' type="text" class="form-control @error('caption') is-invalid @enderror" name='caption' value="{{ old('caption') }}" required autocomplete=caption autofocus>
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">

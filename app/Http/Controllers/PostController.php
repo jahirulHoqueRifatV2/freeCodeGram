@@ -53,7 +53,10 @@ class PostController extends Controller
         ]);
         $imagePath = request('image')->store('uploads', 'public');
 
-        $image  = Image::make(public_path("storage/{$imagePath}"))->fit(1200,1200);
+        $image = Image::make(public_path("storage/{$imagePath}"))->fit(1200,1200);
+
+        //dd($image);
+        $image->save();
 
         Auth::user()->post()->create([
             'caption' => $validateData['caption'] ,
@@ -76,9 +79,11 @@ class PostController extends Controller
      * @param  \App\Post  $posts
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show($post)
     {
-        //
+        $posts = Post::findorFail($post);
+
+        return view('post.show', compact('posts'));
     }
 
     /**

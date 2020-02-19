@@ -2,22 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Profile;
 use Illuminate\Http\Request;
-use App\User;
+use Illuminate\Support\Facades\Auth;
 
-class ProfileController extends Controller
+class homeController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id)
+    public function index()
     {
-        $user = User::where('id', $id)->latest()->firstorFail();
-
-        return view('profile.index', compact('user'));
+        //
     }
 
     /**
@@ -44,56 +41,47 @@ class ProfileController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Profile  $profile
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
 
+        //$user = Auth::id();
 
+        return view('welcome');
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Profile  $profile
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-
-        $user = User::find($id);
-        return view('profile.edit',compact('user'));
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Profile  $profile
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update()
+    public function update(Request $request, $id)
     {
-        $validatedData = request()->validate([
-
-            'title' => 'required | min:20',
-            'description' => 'required | min:50 ',
-            'url' => 'required  '
-        ]);
-
-
-
-        return redirect('/profile/' . auth()->user()->id);
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Profile  $profile
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Profile $profile)
+    public function destroy($id)
     {
         //
     }

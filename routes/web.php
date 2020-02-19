@@ -11,15 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'homeController@show');
+Route::get('/home', 'homeController@show');
 
 Auth::routes();
 
 Route::post('/post', 'PostController@store');
+Route::get('/post/{post}', 'PostController@show');
 Route::get('/post/create','PostController@create')->name('post.create');
 
-Route::get('/profile/{id}', 'ProfileController@index')->name('profile.index');
+Route::get('/profile/{id}', 'ProfileController@index')->name('profile');
+Route::get('/profile/{id}/edit', 'ProfileController@edit');
+Route::patch('/profile/{id}', 'ProfileController@update');
+
+
 
 
