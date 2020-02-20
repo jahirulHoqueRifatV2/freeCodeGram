@@ -22,8 +22,7 @@ Route::get('/post/create','PostController@create')->name('post.create');
 
 Route::get('/profile/{id}', 'ProfileController@index')->name('profile');
 Route::get('/profile/{id}/edit', 'ProfileController@edit');
-Route::patch('/profile/{id}', 'ProfileController@update');
-
+Route::patch('/profile', 'ProfileController@update');
 
 
 

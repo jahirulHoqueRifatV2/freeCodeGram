@@ -32,28 +32,28 @@
                     </div>
 
                     <div class="form-group row">
-                            <label for= 'Description' class="col-md-4 col-form-label ">Description</label>
+                            <label for= 'description' class="col-md-4 col-form-label ">Description</label>
 
                             {{-- <div class="col-md-6"> --}}
-                                <input id='Description' type="text" class="form-control @error('Description') is-invalid @enderror" name='Description' value="{{ old('Description') ?? $user->profile->description}}" required autocomplete=caption autofocus>
+                                <input id='description' type="text" class="form-control @error('description') is-invalid @enderror" name='description' value="{{ old('Description') ?? $user->profile->description}}" required autocomplete=caption autofocus>
 
-                                @error('Description')
+                                @error('description')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('Description') }}</strong>
+                                        <strong>{{ $errors->first('description') }}</strong>
                                     </span>
                                 @enderror
                             {{-- </div> --}}
                     </div>
 
                     <div class="form-group row">
-                            <label for= 'Url' class="col-md-4 col-form-label ">URL</label>
+                            <label for= 'url' class="col-md-4 col-form-label ">URL</label>
 
                             {{-- <div class="col-md-6"> --}}
-                                <input id='Url' type="text" class="form-control @error('Url') is-invalid @enderror" name='Url' value="{{ old('Url') ?? $user->profile->url}}" required autocomplete=caption autofocus>
+                                <input id='url' type="text" class="form-control @error('url') is-invalid @enderror" name='url' value="{{ old('url') ?? $user->profile->url}}" required autocomplete=caption autofocus>
 
-                                @error('Url')
+                                @error('url')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('Url') }}</strong>
+                                        <strong>{{ $errors->first('url') }}</strong>
                                     </span>
                                 @enderror
                             {{-- </div> --}}

@@ -4,10 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Profile;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\User;
 
 class ProfileController extends Controller
 {
+
+
+    public function __construct(){
+
+        $this->middleware('auth');
+    }
+
+
+
     /**
      * Display a listing of the resource.
      *
@@ -77,21 +87,27 @@ class ProfileController extends Controller
     {
         $validatedData = request()->validate([
 
-            'title' => 'required | min:20',
-            'description' => 'required | min:50 ',
-            'url' => 'required  '
+            'title' => 'required',
+            'description' => 'required',
+            'url' => 'sometimes|required|email'
         ]);
 
 
-        $profile = user()->profile()->id(); 
+        $profile = User::find(auth()->user()->id)->profile; 
 
-        $profile->title = request('title');
-        $profile->description = request('description');
-        $profile->url = request('url');
+        Auth::user()->profile()->update([
 
-        $profile->save();
+            'title' => request('title'),
+            'description' => request('description'),
+            'url' => request('url')
+        ]);
 
 
+        
+
+        //$profile->save();
+
+        //dd($profile);
 
         return redirect('/profile/' . auth()->user()->id);
     }
